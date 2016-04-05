@@ -18,7 +18,7 @@ public class knn {
 
     public static void readfiles() throws IOException {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("randomData"));
+            BufferedReader reader = new BufferedReader(new FileReader("/home/thanksgiving/Dropbox/task [9-12]/task 11/kNN/randomData"));
             String line = null;
             int sum = 0;
             while ((line = reader.readLine()) != null) {
@@ -69,7 +69,9 @@ public class knn {
                 knode node = nodes.get(i);
                 trainset.add(node);
             }
-            System.out.println("test case " + j);
+//            System.out.println("trainset.size()" + trainset.size());
+//            System.out.println("testset.size()" + testset.size());
+            System.out.println("------- test case " + j +" ------------");
             // System.out.println(testset.size());
             normalizeTrain(trainset);
             normalizeTest(testset);
